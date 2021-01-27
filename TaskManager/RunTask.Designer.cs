@@ -30,45 +30,47 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRun = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 55);
+            this.label1.Location = new System.Drawing.Point(36, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.Size = new System.Drawing.Size(43, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = "Open";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(253, 50);
+            this.textBox1.Location = new System.Drawing.Point(85, 27);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
+            this.textBox1.Size = new System.Drawing.Size(469, 22);
             this.textBox1.TabIndex = 1;
             // 
-            // button1
+            // btnRun
             // 
-            this.button1.Location = new System.Drawing.Point(473, 136);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRun.Location = new System.Drawing.Point(467, 65);
+            this.btnRun.Name = "btnRun";
+            this.btnRun.Size = new System.Drawing.Size(87, 29);
+            this.btnRun.TabIndex = 2;
+            this.btnRun.Text = "Run";
+            this.btnRun.UseVisualStyleBackColor = true;
             // 
             // RunTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 171);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(577, 117);
+            this.Controls.Add(this.btnRun);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.MinimizeBox = false;
             this.Name = "RunTask";
-            this.Text = "RunTask";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Run new task";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,6 +80,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRun;
     }
 }
