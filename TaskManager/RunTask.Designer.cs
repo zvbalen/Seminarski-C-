@@ -52,6 +52,7 @@
             // 
             // btnRun
             // 
+            this.btnRun.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnRun.Location = new System.Drawing.Point(467, 65);
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(87, 29);
