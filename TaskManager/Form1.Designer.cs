@@ -70,6 +70,7 @@
             this.runNewTaskToolStripMenuItem.Name = "runNewTaskToolStripMenuItem";
             this.runNewTaskToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.runNewTaskToolStripMenuItem.Text = "Run new task";
+            this.runNewTaskToolStripMenuItem.Click += new System.EventHandler(this.runNewTaskToolStripMenuItem_Click);
             // 
             // listBox
             // 
@@ -100,8 +101,10 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Task Manager";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();

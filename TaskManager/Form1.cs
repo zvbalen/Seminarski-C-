@@ -52,5 +52,10 @@ namespace TaskManager
             }
 
         }
+
+        private void runNewTaskToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
