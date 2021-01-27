@@ -55,6 +55,11 @@ namespace TaskManager
 
         private void runNewTaskToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            using (RunTask Rt = new RunTask())
+            {
+                if (Rt.ShowDialog() == DialogResult.OK)
+                    GetAllProcess();
+            }
 
         }
     }
