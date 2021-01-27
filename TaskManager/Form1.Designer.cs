@@ -88,6 +88,7 @@
             this.btnEndTask.TabIndex = 3;
             this.btnEndTask.Text = "End Task";
             this.btnEndTask.UseVisualStyleBackColor = true;
+            this.btnEndTask.Click += new System.EventHandler(this.btnEndTask_Click);
             // 
             // Form1
             // 

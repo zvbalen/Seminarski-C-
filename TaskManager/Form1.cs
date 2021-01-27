@@ -35,5 +35,22 @@ namespace TaskManager
             GetAllProcess();
 
         }
+
+        private void btnEndTask_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                proc[listBox.SelectedIndex].Kill();
+                GetAllProcess();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            
+            }
+
+        }
     }
 }
