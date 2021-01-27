@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtOpen = new System.Windows.Forms.TextBox();
             this.btnRun = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -43,12 +43,12 @@
             this.label1.Text = "Open";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // txtOpen
             // 
-            this.textBox1.Location = new System.Drawing.Point(85, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(469, 22);
-            this.textBox1.TabIndex = 1;
+            this.txtOpen.Location = new System.Drawing.Point(85, 27);
+            this.txtOpen.Name = "txtOpen";
+            this.txtOpen.Size = new System.Drawing.Size(469, 22);
+            this.txtOpen.TabIndex = 1;
             // 
             // btnRun
             // 
@@ -58,6 +58,7 @@
             this.btnRun.TabIndex = 2;
             this.btnRun.Text = "Run";
             this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
             // RunTask
             // 
@@ -65,7 +66,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 117);
             this.Controls.Add(this.btnRun);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtOpen);
             this.Controls.Add(this.label1);
             this.MinimizeBox = false;
             this.Name = "RunTask";
@@ -79,7 +80,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtOpen;
         private System.Windows.Forms.Button btnRun;
     }
 }
