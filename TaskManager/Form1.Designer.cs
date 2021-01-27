@@ -32,7 +32,8 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.runNewTaskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox = new System.Windows.Forms.ListBox();
+            this.btnEndTask = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,21 +71,31 @@
             this.runNewTaskToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.runNewTaskToolStripMenuItem.Text = "Run new task";
             // 
-            // listBox1
+            // listBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(13, 32);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(502, 468);
-            this.listBox1.TabIndex = 2;
+            this.listBox.FormattingEnabled = true;
+            this.listBox.ItemHeight = 16;
+            this.listBox.Location = new System.Drawing.Point(13, 32);
+            this.listBox.Name = "listBox";
+            this.listBox.Size = new System.Drawing.Size(502, 468);
+            this.listBox.TabIndex = 2;
+            // 
+            // btnEndTask
+            // 
+            this.btnEndTask.Location = new System.Drawing.Point(420, 517);
+            this.btnEndTask.Name = "btnEndTask";
+            this.btnEndTask.Size = new System.Drawing.Size(95, 32);
+            this.btnEndTask.TabIndex = 3;
+            this.btnEndTask.Text = "End Task";
+            this.btnEndTask.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 561);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.btnEndTask);
+            this.Controls.Add(this.listBox);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
@@ -103,7 +114,8 @@
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem runNewTaskToolStripMenuItem;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox;
+        private System.Windows.Forms.Button btnEndTask;
     }
 }
 
