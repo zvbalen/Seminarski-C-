@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7FC5C29E-6510-4E43-A99A-29215699B3A5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TaskManager</RootNamespace>
-    <AssemblyName>TaskManager</AssemblyName>
+    <RootNamespace>TaskManager2</RootNamespace>
+    <AssemblyName>TaskManager2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -71,6 +71,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RunTask.resx">
       <DependentUpon>RunTask.cs</DependentUpon>
