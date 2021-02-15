@@ -1,46 +1,80 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TaskManager
 {
     public partial class Form1 : Form
     {
+        private System.Windows.Forms.Timer timer1;
+        public void InitTimer()
+        {
+            timer1 = new System.Windows.Forms.Timer();
+            timer1.Tick += new EventHandler(timer1_Tick);
+            timer1.Interval = 1000;
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            GetAllProcess();
+        }
+
+
         public Form1()
         {
             InitializeComponent();
+
+
         }
 
-        Process[] proc;
+        Process[] arrayOfProcesses;
+
 
         void GetAllProcess()
         {
-            proc = Process.GetProcesses();
-            listBox.Items.Clear();
-            foreach (Process p in proc)
-                listBox.Items.Add(p.ProcessName);
 
-        
+            try
+            {
+                float cpu = pcCPU.NextValue();
+                float memory = pcRAM.NextValue();
+
+                progressBar1.Value = (int)memory;
+                ramLbl.Text = string.Format("{0:0.00}%", memory);
+
+                CPUprogressbar.Value = ((int)cpu);
+
+                cpulbl.Text = string.Format("{0:0.00}%", cpu);
+
+                arrayOfProcesses = Process.GetProcesses();
+                listBox.Items.Clear();
+                foreach (Process process in arrayOfProcesses)
+                {
+                    listBox.Items.Add(process.ProcessName);
+
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             GetAllProcess();
-
         }
+
 
         private void btnEndTask_Click(object sender, EventArgs e)
         {
             try
             {
-                proc[listBox.SelectedIndex].Kill();
+                arrayOfProcesses[listBox.SelectedIndex].Kill();
                 GetAllProcess();
 
             }
@@ -48,7 +82,6 @@ namespace TaskManager
             {
                 MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            
             }
 
         }
@@ -60,6 +93,12 @@ namespace TaskManager
                 if (Rt.ShowDialog() == DialogResult.OK)
                     GetAllProcess();
             }
+
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            InitTimer();
 
         }
     }

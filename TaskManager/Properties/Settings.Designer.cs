@@ -22,5 +22,14 @@ namespace TaskManager2.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Memory")]
+        public string Memory {
+            get {
+                return ((string)(this["Memory"]));
+            }
+        }
     }
 }
